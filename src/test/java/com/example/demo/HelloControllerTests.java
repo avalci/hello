@@ -25,10 +25,8 @@ class HelloControllerTests {
 		ResponseEntity<String> entity = restTemplate.exchange("http://localhost:" + port, HttpMethod.GET, null,
 				String.class);
 
-		assertAll(
-				() -> assertEquals(HttpStatus.OK, entity.getStatusCode()), 
-				() -> assertEquals("hello", entity.getBody())
-		);
+		assertAll(() -> assertEquals(HttpStatus.OK, entity.getStatusCode()),
+				() -> assertEquals("hello", entity.getBody()));
 	}
 
 }
