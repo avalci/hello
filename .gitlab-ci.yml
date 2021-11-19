@@ -12,6 +12,7 @@ cache:
 
 stages:
   - test
+  - sonar
   - build
   - deploy
 
@@ -22,6 +23,11 @@ test:
   stage: test
   script:
     - ./mvnw test
+
+sonar:
+  stage: sonar
+  script:
+    - ./mvnw sonar:sonar -Dsonar.projectKey=hello -Dsonar.host.url=http://192.168.1.109:9000 -Dsonar.login=d44db619389c1fa07a2b39f42f94e88b370eacff
 
 build:
   stage: build
