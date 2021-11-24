@@ -26,7 +26,7 @@ class HelloControllerTests {
 				String.class);
 
 		assertAll(() -> assertEquals(HttpStatus.OK, entity.getStatusCode()),
-				() -> assertEquals("hello", entity.getBody()));
+				() -> assertEquals("Hello", entity.getBody()));
 	}
 
 }
