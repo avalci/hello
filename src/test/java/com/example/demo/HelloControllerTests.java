@@ -21,7 +21,7 @@ class HelloControllerTests {
 	@LocalServerPort
 	private int port;
 
-	@Value("application-version")
+	@Value("${application-version}")
 	private String version;
 
 	@Test

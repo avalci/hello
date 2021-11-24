@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-	@Value("application-version")
+	@Value("${application-version}")
 	private String version;
 
 	@GetMapping
